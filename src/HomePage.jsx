@@ -35,6 +35,7 @@ const articles = [
     {
         title: 'Mitos vs Fakta Diet Rendah Karbohidrat: Tinjauan Gizi Klinis',
         excerpt: 'Mengupas tuntas tren pembatasan karbohidrat ekstrem dari kacamata sains. Kapan diet ini efektif, apa efek sampingnya bagi metabolisme, dan bagaimana penerapannya yang aman tanpa merusak fungsi organ tubuh.',
+        content: 'Diet rendah karbohidrat kini menjadi salah satu tren paling populer di dunia kesehatan. Namun, dari sudut pandang gizi klinis, pembatasan ekstrem sering kali membawa dampak yang tidak terduga pada metabolisme tubuh. Karbohidrat adalah sumber energi utama bagi otak dan otot. Ketika asupannya dipotong secara radikal, tubuh dipaksa masuk ke dalam kondisi ketosis, di mana lemak digunakan sebagai bahan bakar utama.\n\nMeskipun efektif untuk penurunan berat badan jangka pendek, diet rendah karbohidrat yang tidak diawasi dapat memicu kelelahan kronis, kabut otak (brain fog), hingga ketidakseimbangan elektrolit. Penerapan yang aman harus tetap mengutamakan karbohidrat kompleks berserat tinggi (seperti beras merah atau oat) dalam porsi yang disesuaikan, bukan menghilangkannya sama sekali demi menjaga kinerja organ dalam tetap optimal.',
         cat: 'Diet & Metabolisme',
         read: '8 menit baca',
         img: IMG.grains,
@@ -42,6 +43,7 @@ const articles = [
     {
         title: 'Strategi Intervensi Gizi untuk Pencegahan Stunting pada Anak Pesisir',
         excerpt: 'Analisis mendalam mengenai pemanfaatan protein lokal berbasis pangan laut untuk mengatasi masalah malnutrisi kronis. Panduan praktis alokasi zat gizi mikro bagi ibu hamil dan balita di komunitas masyarakat pantai.',
+        content: 'Masyarakat pesisir sering kali menghadapi ironi besar: hidup di dekat sumber protein laut yang melimpah, namun tingkat stunting pada anak-anak tetap tinggi. Masalah ini umumnya berakar dari pola asuh gizi, akses air bersih, dan distribusi hasil tangkapan laut yang lebih mengutamakan nilai ekonomi daripada konsumsi domestik.\n\nStrategi intervensi gizi yang efektif di wilayah pantai harus difokuskan pada optimalisasi pangan lokal. Ikan kembung, lomek, dan kerang lokal memiliki kandungan omega-3, zink, dan protein hewani yang tidak kalah bersaing dengan ikan impor seperti salmon. Edukasi bagi ibu hamil mengenai pentingnya pemenuhan gizi mikro pada 1000 Hari Pertama Kehidupan (HPK) menggunakan bahan makanan berbasis laut setempat merupakan kunci utama memutus rantai malnutrisi kronis ini.',
         cat: 'Gizi Masyarakat',
         read: '10 menit baca',
         img: IMG.salmon,
@@ -49,6 +51,7 @@ const articles = [
     {
         title: 'Panduan Menyusun Menu Isi Piringku: Porsi Tepat Tanpa Timbangan',
         excerpt: 'Kerangka kerja praktis dari standar Kementerian Kesehatan yang disederhanakan. Cara membagi porsi karbohidrat kompleks, protein nabati/hewani, serta sayuran tinggi serat hanya dengan menggunakan visualisasi tangan.',
+        content: 'Menjaga pola makan sehat sering kali dianggap merepotkan karena harus menimbang makanan. Padahal, Kementerian Kesehatan RI telah menyediakan panduan praktis lewat kampanye "Isi Piringku". Kita bisa menggunakan metode visualisasi tangan sebagai pengganti timbangan.\n\nDalam satu piring makan, bagilah menjadi dua bagian utama. Sepertiga dari setengah piring diisi oleh lauk-pauk sumber protein (nabati maupun hewani), dan dua pertiganya diisi oleh makanan pokok sumber karbohidrat. Setengah piring sisanya dialokasikan untuk sayuran (dua pertiga bagian) dan buah-buahan (sepertiga bagian). Dengan visualisasi ini, Anda tetap bisa memenuhi kebutuhan serat, vitamin, dan makronutrien harian secara seimbang tanpa stres.',
         cat: 'Perencanaan Makan',
         read: '6 menit baca',
         img: IMG.mealprep,
@@ -56,6 +59,7 @@ const articles = [
     {
         title: 'Dampak Konsumsi Ultra-Processed Food (UPF) Terhadap Mikrobioma Usus',
         excerpt: 'Bagaimana makanan cepat saji dan kemasan dengan bahan tambahan pangan memicu inflamasi tingkat rendah di pencernaan, serta langkah restorasi bakteri baik melalui konsumsi prebiotik alami harian.',
+        content: 'Makanan ultra-proses (Ultra-Processed Food/UPF) seperti mi instan, sosis, dan minuman kemasan manis telah mendominasi pola makan modern. Sayangnya, makanan ini mengandung zat aditif, emulsifier, dan pemanis buatan yang dapat merusak keseimbangan ekosistem bakteri baik di dalam usus kita.\n\nKerusakan mikrobioma usus akibat UPF memicu kondisi dysbiosis, yang memicu inflamasi tingkat rendah (low-grade inflammation) dan berkaitan erat dengan risiko obesitas serta gangguan pencernaan kronis. Untuk merestorasi kembali kesehatan pencernaan, sangat penting membatasi konsumsi UPF dan mulai meningkatkan asupan prebiotik alami seperti pisang, bawang putih, tempe, serta sayuran berdaun hijau guna memberi makan bakteri baik tubuh.',
         cat: 'Kesehatan Pencernaan',
         read: '9 menit baca',
         img: IMG.berries,
@@ -89,6 +93,7 @@ const Reveal = ({ children, i = 0, className = '' }) => (
 const HomePage = () => {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [activeArticle, setActiveArticle] = useState(null); // State untuk artikel aktif
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20);
@@ -219,7 +224,10 @@ const HomePage = () => {
                     </div>
                 </Reveal>
                 <Reveal i={1}>
-                    <a href="#articles" className="group grid overflow-hidden rounded-3xl border border-[#1A365D]/10 bg-white shadow-sm transition-shadow hover:shadow-xl md:grid-cols-2">
+                    <button 
+                        onClick={() => setActiveArticle(featured)}
+                        className="w-full text-left group grid overflow-hidden rounded-3xl border border-[#1A365D]/10 bg-white shadow-sm transition-shadow hover:shadow-xl md:grid-cols-2"
+                    >
                         <div className="overflow-hidden">
                             <img src={featured.img} alt="Makanan kaya Omega-3 di atas piring" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 md:aspect-auto aspect-[4/3]" />
                         </div>
@@ -235,7 +243,7 @@ const HomePage = () => {
                                 Baca Ulasan Lengkap <ArrowUpRight className="h-4 w-4" />
                             </span>
                         </div>
-                    </a>
+                    </button>
                 </Reveal>
             </section>
 
@@ -252,7 +260,10 @@ const HomePage = () => {
                     <div className="grid gap-8 sm:grid-cols-2">
                         {articles.map((a, i) => (
                             <Reveal key={a.title} i={i}>
-                                <a href="#articles" className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#1A365D]/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
+                                <button 
+                                    onClick={() => setActiveArticle(a)}
+                                    className="w-full text-left group flex h-full flex-col overflow-hidden rounded-2xl border border-[#1A365D]/10 bg-white shadow-sm transition-shadow hover:shadow-lg"
+                                >
                                     <div className="overflow-hidden">
                                         <img src={a.img} alt={a.title} className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                     </div>
@@ -264,7 +275,7 @@ const HomePage = () => {
                                             <Clock className="h-3.5 w-3.5" /> {a.read}
                                         </div>
                                     </div>
-                                </a>
+                                </button>
                             </Reveal>
                         ))}
                     </div>
@@ -357,6 +368,31 @@ const HomePage = () => {
                     </div>
                 </div>
             </footer>
+
+            {/* Modal Pop-up untuk Detail Artikel */}
+            {activeArticle && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm">
+                    <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl md:p-8 animate-in fade-in zoom-in-95 duration-200">
+                        <button 
+                            onClick={() => setActiveArticle(null)}
+                            className="absolute right-4 top-4 rounded-full bg-slate-100 p-2 text-[#1A365D] transition-colors hover:bg-slate-200"
+                        >
+                            <X className="h-5 w-5" />
+                        </button>
+                        <span className="text-xs font-600 uppercase tracking-widest text-[#319795]">{activeArticle.cat}</span>
+                        <h2 className="mt-3 font-display text-2xl font-600 leading-snug text-[#1A365D] md:text-3xl">{activeArticle.title}</h2>
+                        <div className="mt-3 flex items-center gap-4 text-xs text-slate-400">
+                            <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {activeArticle.read}</span>
+                        </div>
+                        <div className="mt-6 overflow-hidden rounded-xl">
+                            <img src={activeArticle.img} alt={activeArticle.title} className="w-full object-cover aspect-[16/9]" />
+                        </div>
+                        <div className="mt-6 text-sm leading-relaxed text-slate-600 whitespace-pre-line">
+                            {activeArticle.content || activeArticle.excerpt}
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
