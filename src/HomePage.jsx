@@ -67,7 +67,7 @@ const articles = [
     {
         title: 'Efektivitas Intermittent Fasting Terhadap Sensitivitas Insulin',
         excerpt: 'Tinjauan klinis mengenai mekanisme pembatasan waktu makan terhadap regulasi gula darah. Apakah metode ini aman untuk penderita pradiabetes dan bagaimana protokol gizi yang disarankan.',
-        content: 'Intermittent Fasting (IF) atau puasa intermiten telah bergeser dari sekadar metode estetika penurunan berat badan menjadi intervensi terapeutik dalam manajemen gangguan metabolik, khususnya sindrom resistensi insulin dan kondisi pradiabetes. Secara klinis, pengaturan waktu makan (*time-restricted feeding*) memengaruhi jalur pensinyalan seluler yang meregulasi metabolisme glukosa darah.\n\n### 1. Mekanisme Hormonal Selama Fase Puasa\nKetika tubuh manusia memasuki fase pasca-penyerapan gizi (sekitar 8-12 jam setelah makanan terakhir dikonsumsi), kadar glukosa dalam sirkulasi darah menurun drastis. Hal ini memberikan stimulus pada sel beta pankreas untuk menghentikan sekresi hormon insulin dan memicu sel alfa pankreas mengeluarkan hormon glukagon.\n\nKetiadaan insulin dalam jangka waktu tertentu menyebabkan penurunan regulasi reseptor insulin pada permukaan sel adiposa dan otot. Kondisi ini memberikan waktu istirahat bagi jalur metabolisme seluler, sehingga ketika jendela makan kembali dibuka, sensitivitas reseptor insulin meningkat secara signifikan. Sel menjadi lebih efisien dalam menyerap glukosa darah dengan bantuan volume insulin yang jauh lebih sedikit, mencegah terjadinya hiperglikemia kronis.\n\n### 2. Protokol Metode 16:8 dan Pengaturan Kalori\nProtokol IF yang paling banyak diteliti dan memiliki tingkat kepatuhan klinis tertinggi adalah metode **16 jam puasa dan 8 jam jendela makan**. Berikut adalah contoh distribusi makronutrien ilmiah selama jendela makan 8 jam dengan target energi total **1800 kkal**:\n\n* **Jam 12:00 (Muka Puasa / Meal 1 - 600 kkal):** Karbohidrat Kompleks (Nasi Merah), Protein Tinggi (Dada Ayam/Ikan), Lemak Sehat (Alpukat).\n* **Jam 16:00 (Camilan Nutrisi / Snack - 300 kkal):** Kacang Almond atau Yoghurt Plain dengan potongan buah beri segar.\n* **Jam 19:30 (Makan Terakhir / Meal 2 - 900 kkal):** Karbohidrat Kompleks Moderat (Ubi), Protein Sedang (Tahu/Telur), Sayuran Tinggi Serat.\n\n### 3. Parameter Keamanan Klinis Kontraindikasi\nMeskipun IF terbukti efektif menurunkan kadar hemoglobin A1c (HbA1c) pada penderita pradiabetes, metode ini memiliki batasan keamanan klinis yang ketat. Pembatasan waktu makan **sangat dilarang** diterapkan pada individu dengan riwayat *Eating Disorder* (seperti Anoreksia atau Bulimia), wanita hamil dan menyusui yang membutuhkan asupan nutrisi konstan, serta pasien diabetes melitus tipe 1 yang bergantung penuh pada injeksi insulin eksogen karena berisiko memicu serangan hipoglikemia akut yang mengancam nyawa.',
+        content: 'Intermittent Fasting (IF) atau puasa intermiten telah bergeser dari sekadar metode estetika penurunan berat badan menjadi intervensi terapeutik dalam manajemen gangguan metabolik, khususnya sindrom resistensi insulin dan kondisi pradiabetes. Secara klinis, saat tubuh berada dalam fase puasa yang terkontrol (misalnya protokol 16:8), kadar glukosa dalam sirkulasi darah menurun drastis. Hal ini memberikan stimulus pada sel beta pankreas untuk menghentikan sekresi hormon insulin dan memicu sel alfa pankreas mengeluarkan hormon glukagon.\n\n### 1. Mekanisme Hormonal Selama Fase Puasa\nKetiadaan insulin dalam jangka waktu tertentu menyebabkan penurunan regulasi reseptor insulin pada permukaan sel adiposa dan otot. Kondisi ini memberikan waktu istirahat bagi jalur metabolisme seluler, sehingga ketika jendela makan kembali dibuka, sensitivitas reseptor insulin meningkat secara signifikan. Sel menjadi lebih efisien dalam menyerap glukosa darah dengan bantuan volume insulin yang jauh lebih sedikit, mencegah terjadinya hiperglikemia kronis.\n\n### 2. Protokol Metode 16:8 dan Pengaturan Kalori\nProtokol IF yang paling banyak diteliti dan memiliki tingkat kepatuhan klinis tertinggi adalah metode **16 jam puasa dan 8 jam jendela makan**. Berikut adalah contoh distribusi makronutrien ilmiah selama jendela makan 8 jam dengan target energi total **1800 kkal**:\n\n* **Jam 12:00 (Muka Puasa / Meal 1 - 600 kkal):** Karbohidrat Kompleks (Nasi Merah), Protein Tinggi (Dada Ayam/Ikan), Lemak Sehat (Alpukat).\n* **Jam 16:00 (Camilan Nutrisi / Snack - 300 kkal):** Kacang Almond atau Yoghurt Plain dengan potongan buah beri segar.\n* **Jam 19:30 (Makan Terakhir / Meal 2 - 900 kkal):** Karbohidrat Kompleks Moderat (Ubi), Protein Sedang (Tahu/Telur), Sayuran Tinggi Serat.\n\n### 3. Parameter Keamanan Klinis Kontraindikasi\nMeskipun IF terbukti efektif menurunkan kadar hemoglobin A1c (HbA1c) pada penderita pradiabetes, metode ini memiliki batasan keamanan klinis yang ketat. Pembatasan waktu makan **sangat dilarang** diterapkan pada individu dengan riwayat *Eating Disorder* (seperti Anoreksia atau Bulimia), wanita hamil dan menyusui yang membutuhkan asupan nutrisi konstan, serta pasien diabetes melitus tipe 1 yang bergantung penuh pada injeksi insulin eksogen karena berisiko memicu serangan hipoglikemia akut yang mengancam nyawa.',
         cat: 'Diet & Metabolisme',
         read: '8 menit baca',
         img: IMG.hero,
@@ -132,6 +132,11 @@ const HomePage = () => {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
+
+    const handleSubscribe = (e) => {
+        e.preventDefault();
+        alert('Terima kasih! Email Anda berhasil terdaftar dalam sistem buletin ilmiah NutrisiDietMu.');
+    };
 
     return (
         <div className="min-h-screen bg-white text-[#1A365D]">
@@ -340,7 +345,7 @@ const HomePage = () => {
                         <p className="mt-4 text-white/70">
                             Satu email edukatif berbasis bukti ilmiah setiap minggu. Tanpa tren diet ekstrem, tanpa penyebaran rasa takut — murni edukasi yang jelas.
                         </p>
-                        <form onSubmit={(e) => e.preventDefault()} className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
+                        <form onSubmit={handleSubscribe} className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
                             <div className="relative flex-1">
                                 <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#1A365D]/40" />
                                 <input
@@ -404,7 +409,7 @@ const HomePage = () => {
             {/* Halaman Pembaca Penuh (Full-screen Article Page Overlay) */}
             {activeArticle && (
                 <div className="fixed inset-0 z-50 overflow-y-auto bg-white animate-in fade-in duration-200">
-                    {/* Top Bar / Navigasi Atas Halaman Artikel */}
+                    {/* Top Bar */}
                     <div className="sticky top-0 z-10 border-b border-[#1A365D]/10 bg-white/90 backdrop-blur-md">
                         <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
                             <button 
@@ -419,9 +424,8 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    {/* Area Konten Utama Artikel */}
+                    {/* Area Konten Utama */}
                     <article className="mx-auto max-w-3xl px-6 py-10 md:py-16">
-                        {/* Kategori & Waktu Baca */}
                         <div className="flex items-center gap-3 text-xs font-600 uppercase tracking-widest text-[#319795]">
                             <span>{activeArticle.cat}</span>
                             <span className="text-slate-300">&bull;</span>
@@ -430,21 +434,14 @@ const HomePage = () => {
                             </span>
                         </div>
 
-                        {/* Judul Besar Halaman */}
                         <h1 className="mt-4 font-display text-3xl font-700 leading-tight text-[#1A365D] md:text-5xl">
                             {activeArticle.title}
                         </h1>
 
-                        {/* Gambar Utama Halaman Penuh */}
                         <div className="mt-8 overflow-hidden rounded-3xl shadow-lg">
-                            <img 
-                                src={activeArticle.img} 
-                                alt={activeArticle.title} 
-                                className="w-full object-cover aspect-[16/9]" 
-                            />
+                            <img src={activeArticle.img} alt={activeArticle.title} className="w-full object-cover aspect-[16/9]" />
                         </div>
 
-                        {/* Isi Teks Artikel Lengkap (Gaya Jurnal Ilmiah) */}
                         <div className="mt-10 text-base md:text-lg leading-relaxed text-slate-700 whitespace-pre-line font-serif">
                             {activeArticle.content ? (
                                 activeArticle.content.split('\n\n').map((paragraph, index) => {
@@ -469,7 +466,6 @@ const HomePage = () => {
                             )}
                         </div>
 
-                        {/* Footer Penulis di Akhir Artikel */}
                         <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-slate-400">
                             <p>Ditinjau secara klinis oleh: <strong>Komite Editorial Nutrisi & Gizi PT Rayliziie Media Digital</strong></p>
                             <p className="mt-1">Dipublikasikan pada kategori {activeArticle.cat} &bull; Berbasis Bukti Ilmiah</p>
