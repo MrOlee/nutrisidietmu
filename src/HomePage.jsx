@@ -353,12 +353,12 @@ const HomePage = () => {
                             {/* Pembagian Tim Reviewer / Editor */}
                             <div className="mt-8 grid gap-6 border-t border-slate-100 pt-6 sm:grid-cols-2">
                                 <div>
-                                    <p className="text-sm font-700 text-[#1A365D]">Muhammad Syuhada Ar\'rayyan</p>
+                                    <p className="text-sm font-700 text-[#1A365D]">Muhammad Syuhada Ar'rayyan</p>
                                     <p className="text-xs text-[#1A365D]/60">Komite Editorial & Reviewer Gizi</p>
                                     <p className="text-xs font-500 text-[#319795]">Universitas Islam Negeri Sumatera Utara</p>
                                 </div>
                                 <div className="border-l-0 pt-4 sm:pt-0 sm:border-l sm:pl-6 border-slate-100">
-                                    <p className="text-sm font-700 text-[#1A365D]">Andina Putri</p>
+                                    <p className="text-sm font-700 text-[#1A365D]">Andina Putri, S.Gz</p>
                                     <p className="text-xs text-[#1A365D]/60">Komite Editorial & Reviewer Gizi</p>
                                     <p className="text-xs font-500 text-[#319795]">Universitas Negeri Medan</p>
                                 </div>
