@@ -319,22 +319,37 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* Bagian Komitmen Komite Editorial */}
+{/* Bagian Komitmen Komite Editorial Rapi 2 Nama */}
             <section className="mx-auto max-w-[80rem] px-6 py-20 md:py-28">
                 <Reveal>
-                    <div className="grid items-center gap-10 rounded-3xl border border-[#1A365D]/10 bg-white p-8 shadow-sm md:grid-cols-[auto_1fr] md:p-12">
-                        <img src={IMG.author} alt="Direktur Editorial NutrisiDietMu" className="h-28 w-28 rounded-2xl object-cover ring-1 ring-[#1A365D]/10 md:h-40 md:w-40" />
+                    <div className="grid items-center gap-10 rounded-3xl border border-[#1A365D]/10 bg-white p-8 shadow-sm md:p-12">
                         <div>
                             <span className="text-xs font-600 uppercase tracking-widest text-[#319795]">Standar Editorial Kami</span>
-                            <blockquote className="mt-3 font-display text-xl font-500 leading-relaxed text-[#1A365D] md:text-2xl">
+                            <blockquote className="mt-3 font-display text-xl font-550 leading-relaxed text-[#1A365D] md:text-2xl">
                                 &ldquo;Kami hanya mempublikasikan apa yang didukung oleh pembuktian sains yang kuat. Jika bukti ilmiah di lapangan masih belum pasti, kami akan mengatakannya secara jujur — karena kepercayaan dibangun atas dasar kejujuran fakta, bukan sekadar sensasi pemasaran.&rdquo;
                             </blockquote>
-                            <p className="mt-4 text-sm font-600 text-[#1A365D]">Komite Editorial Nutrisi & Gizi &middot; PT Rayliziie Media Digital</p>
+                            
+                            {/* Pembagian Tim Reviewer / Editor */}
+                            <div className="mt-8 grid gap-6 border-t border-slate-100 pt-6 sm:grid-cols-2">
+                                <div>
+                                    <p className="text-sm font-700 text-[#1A365D]">Muhammad Syuhada Ar'rayyan</p>
+                                    <p className="text-xs text-[#1A365D]/60">Komite Editorial & Reviewer Gizi</p>
+                                    <p className="text-xs font-500 text-[#319795]">Universitas Islam Negeri Sumatera Utara</p>
+                                </div>
+                                <div className="border-l-0 pt-4 sm:pt-0 sm:border-l sm:pl-6 border-slate-100">
+                                    <p className="text-sm font-700 text-[#1A365D]">Andina Putri, S.Gz</p>
+                                    <p className="text-xs text-[#1A365D]/60">Komite Editorial & Reviewer Gizi</p>
+                                    <p className="text-xs font-500 text-[#319795]">Universitas Negeri Medan</p>
+                                </div>
+                            </div>
+                            
+                            <p className="mt-6 text-xs font-600 tracking-wide uppercase text-slate-400">
+                                Lini Media Resmi &middot; PT Rayliziie Media Digital
+                            </p>
                         </div>
                     </div>
                 </Reveal>
             </section>
-
             {/* Form Buletin Berita / Newsletter */}
             <section id="newsletter" className="bg-[#1A365D] py-20 md:py-24">
                 <div className="mx-auto max-w-2xl px-6 text-center">
