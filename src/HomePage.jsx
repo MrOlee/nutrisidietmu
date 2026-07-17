@@ -369,32 +369,81 @@ const HomePage = () => {
                 </div>
             </footer>
 
-            {/* Modal Pop-up untuk Detail Artikel */}
+            {/* Halaman Pembaca Penuh (Full-screen Article Page Overlay) */}
             {activeArticle && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm">
-                    <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl md:p-8 animate-in fade-in zoom-in-95 duration-200">
-                        <button 
-                            onClick={() => setActiveArticle(null)}
-                            className="absolute right-4 top-4 rounded-full bg-slate-100 p-2 text-[#1A365D] transition-colors hover:bg-slate-200"
-                        >
-                            <X className="h-5 w-5" />
-                        </button>
-                        <span className="text-xs font-600 uppercase tracking-widest text-[#319795]">{activeArticle.cat}</span>
-                        <h2 className="mt-3 font-display text-2xl font-600 leading-snug text-[#1A365D] md:text-3xl">{activeArticle.title}</h2>
-                        <div className="mt-3 flex items-center gap-4 text-xs text-slate-400">
-                            <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {activeArticle.read}</span>
-                        </div>
-                        <div className="mt-6 overflow-hidden rounded-xl">
-                            <img src={activeArticle.img} alt={activeArticle.title} className="w-full object-cover aspect-[16/9]" />
-                        </div>
-                        <div className="mt-6 text-sm leading-relaxed text-slate-600 whitespace-pre-line">
-                            {activeArticle.content || activeArticle.excerpt}
+                <div className="fixed inset-0 z-50 overflow-y-auto bg-white animate-in fade-in duration-200">
+                    {/* Top Bar / Navigasi Atas Halaman Artikel */}
+                    <div className="sticky top-0 z-10 border-b border-[#1A365D]/10 bg-white/90 backdrop-blur-md">
+                        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
+                            <button 
+                                onClick={() => setActiveArticle(null)}
+                                className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-600 text-[#1A365D] transition-colors hover:bg-slate-200"
+                            >
+                                &larr; Kembali ke Beranda
+                            </button>
+                            <span className="font-display text-sm font-600 tracking-tight text-[#1A365D]">
+                                NutrisiDietMu Reader
+                            </span>
                         </div>
                     </div>
+
+                    {/* Area Konten Utama Artikel */}
+                    <article className="mx-auto max-w-3xl px-6 py-10 md:py-16">
+                        {/* Kategori & Waktu Baca */}
+                        <div className="flex items-center gap-3 text-xs font-650 uppercase tracking-widest text-[#319795]">
+                            <span>{activeArticle.cat}</span>
+                            <span className="text-slate-300">&bull;</span>
+                            <span className="flex items-center gap-1 text-slate-400">
+                                <Clock className="h-3.5 w-3.5" /> {activeArticle.read}
+                            </span>
+                        </div>
+
+                        {/* Judul Besar Halaman */}
+                        <h1 className="mt-4 font-display text-3xl font-700 leading-tight text-[#1A365D] md:text-5xl">
+                            {activeArticle.title}
+                        </h1>
+
+                        {/* Gambar Utama Halaman Penuh */}
+                        <div className="mt-8 overflow-hidden rounded-3xl shadow-lg">
+                            <img 
+                                src={activeArticle.img} 
+                                alt={activeArticle.title} 
+                                className="w-full object-cover aspect-[16/9]" 
+                            />
+                        </div>
+
+                        {/* Isi Teks Artikel Lengkap (Gaya Jurnal Ilmiah) */}
+                        <div className="mt-10 text-base md:text-lg leading-relaxed text-slate-700 whitespace-pre-line font-serif">
+                            {/* Trik CSS Render Markdown Sederhana */}
+                            {activeArticle.content ? (
+                                activeArticle.content.split('\n\n').map((paragraph, index) => {
+                                    if (paragraph.startsWith('###')) {
+                                        return (
+                                            <h3 key={index} className="mt-8 mb-4 font-display text-xl font-700 text-[#1A365D] md:text-2xl border-b pb-2">
+                                                {paragraph.replace('###', '').trim()}
+                                            </h3>
+                                        );
+                                    }
+                                    if (paragraph.startsWith('*')) {
+                                        return (
+                                            <div key={index} className="my-3 pl-4 border-l-4 border-[#319795] italic text-slate-600">
+                                                {paragraph}
+                                            </div>
+                                        );
+                                    }
+                                    return <p key={index} className="mb-6 text-justify">{paragraph}</p>;
+                                })
+                            ) : (
+                                <p className="text-justify">{activeArticle.excerpt}</p>
+                            )}
+                        </div>
+
+                        {/* Footer Penulis di Akhir Artikel */}
+                        <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-slate-400">
+                            <p>Ditinjau secara klinis oleh: <strong>Komite Editorial Nutrisi & Gizi PT Rayliziie Media Digital</strong></p>
+                            <p className="mt-1">Dipublikasikan pada kategori {activeArticle.cat} &bull; Berbasis Bukti Ilmiah</p>
+                        </div>
+                    </article>
                 </div>
             )}
-        </div>
-    );
-};
-
 export default HomePage;
