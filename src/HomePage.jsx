@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
     Leaf, Menu, X, ArrowUpRight, ShieldCheck, FlaskConical,
-    BookOpenCheck, Clock, ArrowRight, Mail,
+    BookOpenCheck, Clock, ArrowRight, Mail, Share2,
 } from 'lucide-react';
 
 const IMG = {
@@ -43,7 +43,7 @@ const articles = [
     {
         title: 'Strategi Intervensi Gizi untuk Pencegahan Stunting pada Anak Pesisir',
         excerpt: 'Analisis mendalam mengenai pemanfaatan protein lokal berbasis pangan laut untuk mengatasi masalah malnutrisi kronis. Panduan praktis alokasi zat gizi mikro bagi ibu hamil dan balita di komunitas masyarakat pantai.',
-        content: 'Masyarakat pesisir sering kali menghadapi ironi besar: hidup di dekat sumber protein laut yang melimpah, namun tingkat stunting pada anak-anak tetap tinggi. Masalah ini umumnya berakar dari pola asuh gizi, keterbatasan variasi pangan, serta distribusi hasil tangkapan laut yang lebih mengutamakan nilai ekonomi untuk dijual keluar wilayah daripada konsumsi domestik.\n\n### 1. Analisis Krisis Gizi dan Peran Protein Hewani Laut\nStunting adalah manifestasi klinis dari kegagalan pertumbuhan linier akibat malnutrisi kronis berkepanjangan. Protein hewani memiliki peranan vital sebagai regulator pertumbuhan seluler karena mengandung asam amino esensial lengkap yang memicu pelepasan *Insulin-like Growth Factor 1* (IGF-1), sejenis hormon penentu pertumbuhan tulang pajang pada anak.\n\nKawasan pesisir memiliki keunggulan geografis berupa kelimpahan hayati laut. Banyak masyarakat menganggap pencegahan stunting membutuhkan biaya mahal untuk membeli daging sapi atau ikan impor seperti salmon. Padahal, komoditas lokal pesisir memiliki matriks densitas zat gizi yang sangat tinggi dan jauh lebih ekonomis.\n\n### 2. Komparasi Kandungan Zat Gizi Mikro dan Makro\nBerikut adalah analisis kandungan zat gizi makro dan mikro esensial per 100 gram antara komoditas laut lokal pesisir dengan pangan hewani populer:\n\n* **Ikan Kembung Segar:** Energi: 112 kkal | Protein: 21.4 g | Omega-3: 2.2 g | Zink: 0.9 mg\n* **Ikan Daging Sapi Murni:** Energi: 250 kkal | Protein: 26.0 g | Omega-3: 0.05 g | Zink: 4.8 mg\n* **Ikan Salmon Fillet:** Energi: 208 kkal | Protein: 20.0 g | Omega-3: 2.0 g | Zink: 0.6 mg\n\nDari data klinis tersebut, kita dapat melihat bahwa kandungan asam lemak Omega-3 pada ikan kembung lokal justru melampaui kandungan ikan salmon impor yang mahal. Omega-3 esensial ini sangat krusial untuk menstimulasi perkembangan sinapsis saraf otak anak pada masa keemasan 1000 Hari Pertama Kehidupan (HPK).\n\n### 3. Rumus Estimasi Kecukupan Protein Anak Balita\nBerdasarkan Angka Kecukupan Gizi (AKG) nasional, estimasi kebutuhan protein harian untuk balita usia 1–3 tahun berkisar pada **20 gram protein per hari**. Jika dihitung secara matematis menggunakan pendekatan bioavibilitas protein laut lokal:\n\n* Konsumsi minimal per hari: (50 gram Ikan Kembung) = **10.7 gram protein murni**\n\nDengan memberikan porsi minimal 50 gram ikan kembung per hari, seorang ibu di pesisir pantai sudah berhasil memenuhi lebih dari 50% target kecukupan protein hewani harian anaknya. Sisa kebutuhan lainnya dapat dipenuhi melalui kombinasi pangan nabati lokal seperti tempe atau daun kelor yang kaya akan zat besi.\n\n### 4. Implementasi dan Rekomendasi Kebijakan Komunitas\nIntervensi gizi berbasis masyarakat pesisir tidak boleh hanya mengandalkan suplementasi obat komersial. Pendekatan berkelanjutan dapat dicapai melalui:\n* 1. Edukasi diversifikasi pengolahan pangan laut lokal agar menarik bagi selera balita (misalnya pembuatan bakso ikan kembung murni tanpa banyak tepung).\n* 2. Program pemberdayaan ekonomi ibu rumah tangga pesisir untuk pembudidayaan pekarangan sayur kaya zat besi.\n* 3. Alokasi wajib sebagian hasil tangkapan nelayan lokal untuk konsumsi domestik posyandu desa.',
+        content: 'Masyarakat pesisir sering kali menghadapi ironi besar: hidup di dekat sumber protein laut yang melimpah, namun tingkat stunting pada anak-anak tetap tinggi. Masalah ini umumnya berakar dari pola asuh gizi, keterbatasan variasi pangan, serta distribusi hasil tangkapan laut yang lebih mengutamakan nilai ekonomi untuk dijual keluar wilayah daripada konsumsi domestik.\n\n### 1. Analisis Krisis Gizi dan Peran Protein Hewani Laut\nStunting adalah manifestasi klinis dari kegagalan pertumbuhan linier akibat malnutrisi kronis berkepanjangan. Protein hewani memiliki peranan vital sebagai regulator pertumbuhan seluler karena mengandung asam amino esensial lengkap yang memicu pelepasan *Insulin-like Growth Factor 1* (IGF-1), sejenis hormon penentu pertumbuhan tulang pajang pada anak.\n\nKawasan pesisir memiliki keunggulan geografis berupa kelimpahan hayati laut. Banyak masyarakat menganggap pencegahan stunting membutuhkan biaya mahal untuk membeli daging sapi atau ikan impor seperti salmon. Padahal, komoditas lokal pesisir memiliki matriks densitas zat gizi yang sangat tinggi and jauh lebih ekonomis.\n\n### 2. Komparasi Kandungan Zat Gizi Mikro dan Makro\nBerikut adalah analisis kandungan zat gizi makro dan mikro esensial per 100 gram antara komoditas laut lokal pesisir dengan pangan hewani populer:\n\n* **Ikan Kembung Segar:** Energi: 112 kkal | Protein: 21.4 g | Omega-3: 2.2 g | Zink: 0.9 mg\n* **Ikan Daging Sapi Murni:** Energi: 250 kkal | Protein: 26.0 g | Omega-3: 0.05 g | Zink: 4.8 mg\n* **Ikan Salmon Fillet:** Energi: 208 kkal | Protein: 20.0 g | Omega-3: 2.0 g | Zink: 0.6 mg\n\nDari data klinis tersebut, kita dapat melihat bahwa kandungan asam lemak Omega-3 pada ikan kembung lokal justru melampaui kandungan ikan salmon impor yang mahal. Omega-3 esensial ini sangat krusial untuk menstimulasi perkembangan sinapsis saraf otak anak pada masa keemasan 1000 Hari Pertama Kehidupan (HPK).\n\n### 3. Rumus Estimasi Kecukupan Protein Anak Balita\nBerdasarkan Angka Kecukupan Gizi (AKG) nasional, estimasi kebutuhan protein harian untuk balita usia 1–3 tahun berkisar pada **20 gram protein per hari**. Jika dihitung secara matematis menggunakan pendekatan bioavibilitas protein laut lokal:\n\n* Konsumsi minimal per hari: (50 gram Ikan Kembung) = **10.7 gram protein murni**\n\nDengan memberikan porsi minimal 50 gram ikan kembung per hari, seorang ibu di pesisir pantai sudah berhasil memenuhi lebih dari 50% target kecukupan protein hewani harian anaknya. Sisa kebutuhan lainnya dapat dipenuhi melalui kombinasi pangan nabati lokal seperti tempe atau daun kelor yang kaya akan zat besi.\n\n### 4. Implementasi dan Rekomendasi Kebijakan Komunitas\nIntervensi gizi berbasis masyarakat pesisir tidak boleh hanya mengandalkan suplementasi obat komersial. Pendekatan berkelanjutan dapat dicapai melalui:\n* 1. Edukasi diversifikasi pengolahan pangan laut lokal agar menarik bagi selera balita (misalnya pembuatan bakso ikan kembung murni tanpa banyak tepung).\n* 2. Program pemberdayaan ekonomi ibu rumah tangga pesisir untuk pembudidayaan pekarangan sayur kaya zat besi.\n* 3. Alokasi wajib sebagian hasil tangkapan nelayan lokal untuk konsumsi domestik posyandu desa.',
         cat: 'Gizi Masyarakat',
         read: '10 menit baca',
         img: IMG.salmon,
@@ -59,7 +59,7 @@ const articles = [
     {
         title: 'Dampak Konsumsi Ultra-Processed Food (UPF) Terhadap Mikrobioma Usus',
         excerpt: 'Bagaimana makanan cepat saji dan kemasan dengan bahan tambahan pangan memicu inflamasi tingkat rendah di pencernaan, serta langkah restorasi bakteri baik melalui konsumsi prebiotik alami harian.',
-        content: 'Perubahan pola konsumsi global dalam tiga dekade terakhir menunjukkan peningkatan drastis pada asupan *Ultra-Processed Food* (UPF) atau makanan ultra-proses. Pangan industri ini dirancang agar tahan lama dan sangat lezat menggunakan zat aditif kimia sintetis. Riset gastroenterologi terbaru membuktikan bahwa konsumsi UPF kronis adalah pemicu utama kerusakan arsitektur mikrobioma usus manusia.\n\n### 1. Patofisiologi Dysbiosis Akibat Zat Aditif Pangan\nDi dalam saluran pencernaan manusia hidup triliunan koloni mikroorganisme yang secara kolektif disebut mikrobioma usus. Ekosistem bakteri baik ini membutuhkan pasokan serat pangan difermentasi untuk memproduksi *Short-Chain Fatty Acids* (SCFA), seperti butirat, yang berfungsi menjaga integritas dinding usus dan meregulasi imunitas.\n\nUPF minim akan serat asli namun kaya akan gula rafinasi, lemak trans, serta zat aditif komersial seperti emulsifier (misalnya karagenan, polisorbat-80) dan pemanis buatan. Emulsifier bekerja merusak lapisan mukus pelindung dinding lambung dan usus halus. Akibatnya, bakteri patogen merusak jaringan epitel, memicu kondisi *Leaky Gut Syndrome* (kebocoran usus halus). Komponen bakteri berbahaya kemudian masuk ke aliran darah, memicu sistem imun melepaskan sitokin pro-inflamasi dan menyebabkan **Low-Grade Systemic Inflammation** (inflamasi tingkat rendah yang menyebar ke seluruh tubuh).\n\n### 2. Tabel Identifikasi Bahan Makanan Menurut Sistem Klasifikasi NOVA\nUntuk mempermudah edukasi pasien di klinik gizi, dunia sains internasional menggunakan sistem klasifikasi NOVA untuk membagi tingkatan proses pangan:\n\n* **NOVA 1 (Minimal Proses):** Bahan pangan utuh alami. Contoh: Telur segar, beras pecah kulit, buah potong, susu murni.\n* **NOVA 2 (Bahan Kuliner Olahan):** Zat yang diekstrak langsung dari alam. Contoh: Minyak zaitun, garam dapur, madu murni.\n* **NOVA 3 (Makanan Olahan Halus):** Kombinasi NOVA 1 dan 2 untuk pengawetan. Contoh: Ikan sarden kaleng, keju tradisional, roti segar.\n* **NOVA 4 (Ultra-Processed Food/UPF):** Hasil formulasi industri industri kimia. Contoh: Mi instan, sosis, nugget ayam, minuman soda karbonasi.\n\n### 3. Strategi Klinis Restorasi Ekosistem Usus\nProses pemulihan usus dari dampak kerusakan zat kimia UPF membutuhkan waktu restorasi biologis minimal **4 hingga 8 minggu** dengan menerapkan protokol nutrisi berikut:\n* 1. Eliminasi total produk komersial bersumber dari klasifikasi NOVA 4.\n* 2. Peningkatan asupan prebiotik (makanan untuk bakteri baik) sebanyak minimal 30 gram per hari dari bahan pangan tinggi inulin seperti bawang putih, bawang merah, pisang, dan asparagus.\n* 3. Konsumsi pangan fermentasi kaya probiotik hidup tradisional (seperti tempe, yoghurt tanpa gula, atau kefir) untuk menyuplai koloni bakteri baik baru secara berkala.',
+        content: 'Perubahan pola konsumsi global dalam tiga dekade terakhir menunjukkan peningkatan drastis pada asupan *Ultra-Processed Food* (UPF) atau makanan ultra-proses. Pangan industri ini dirancang agar tahan lama dan sangat lezat menggunakan zat aditif kimia sintetis. Riset gastroenterologi terbaru membuktikan bahwa konsumsi UPF kronis adalah pemicu utama kerusakan arsitektur mikrobioma usus manusia.\n\n### 1. Patofisiologi Dysbiosis Akibat Zat Aditif Pangan\nDi dalam saluran pencernaan manusia hidup triliunan koloni mikroorganisme yang secara kolektif disebut mikrobioma usus. Ekosistem bakteri baik ini membutuhkan pasokan serat pangan difermentasi untuk memproduksi *Short-Chain Fatty Acids* (SCFA), seperti butirat, yang berfungsi menjaga integritas dinding usus dan meregulasi imunitas.\n\nUPF minim akan serat asli namun kaya akan gula rafinasi, lemak trans, serta zat aditif komersial seperti emulsifier (misalnya karagenan, polisorbat-80) dan pemanis buatan. Emulsifier bekerja merusak lapisan mukus pelindung dinding lambung dan usus halus. Akibatnya, bakteri patogen merusak jaringan epitel, memicu kondisi *Leaky Gut Syndrome* (kebocoran usus halus). Komponen bakteri berbahaya kemudian masuk ke aliran darah, memicu sistem imun melepaskan sitokin pro-inflamasi dan menyebabkan **Low-Grade Systemic Inflammation** (inflamasi tingkat rendah yang menyebar ke seluruh tubuh).\n\n### 2. Tabel Identifikasi Bahan Makanan Menurut Sistem Klasifikasi NOVA\nUntuk mempermudah edukasi pasien di klinik gizi, dunia sains internasional menggunakan sistem klasifikasi NOVA untuk membagi tingkatan proses pangan:\n\n* **NOVA 1 (Minimal Proses):** Bahan pangan utuh alami. Contoh: Telur segar, beras pecah kulit, buah potong, susu murni.\n* **NOVA 2 (Bahan Kuliner Olahan):** Zat yang diekstrak langsung dari alam. Contoh: Minyak zaitun, garam dapur, madu murni.\n* **NOVA 3 (Makanan Olahan Halus):** Kombinasi NOVA 1 dan 2 untuk pengawetan. Contoh: Ikan sarden kaleng, keju tradisional, roti segar.\n* **NOVA 4 (Ultra-Processed Food/UPF):** Hasil formulasi industri industri kimia. Contoh: Mi instan, sosis, nugget ayam, minuman soda karbonasi.\n\n### 3. Strategi Klinis Restorasi Ekosistem Usus\nProses pemulihan usus dari dampak kerusakan zat kimia UPF membutuhkan waktu restorasi biologis minimal **4 hingga 8 minggu** dengan menerapkan protokol nutrisi berikut:\n* 1. Eliminasi total produk komersial bersumber dari klasifikasi NOVA 4.\n* 2. Peningkatan asupan prebiotik (makanan untuk bakteri baik) sebanyak minimal 30 gram per hari dari bahan pangan tinggi inulin seperti bawang garlic, bawang merah, pisang, dan asparagus.\n* 3. Konsumsi pangan fermentasi kaya probiotik hidup tradisional (seperti tempe, yoghurt tanpa gula, atau kefir) untuk menyuplai koloni bakteri baik baru secara berkala.',
         cat: 'Kesehatan Pencernaan',
         read: '9 menit baca',
         img: IMG.berries,
@@ -138,6 +138,32 @@ const HomePage = () => {
         alert('Terima kasih! Email Anda berhasil terdaftar dalam sistem buletin ilmiah NutrisiDietMu.');
     };
 
+    const scrollToSection = (id) => (e) => {
+        e.preventDefault();
+        setOpen(false);
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleShare = async (article) => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: article.title,
+                    text: article.excerpt,
+                    url: window.location.href,
+                });
+            } catch (err) {
+                console.log('Error sharing:', err);
+            }
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Tautan website berhasil disalin ke papan klip!');
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white text-[#1A365D]">
             {/* Header Navigasi */}
@@ -147,7 +173,7 @@ const HomePage = () => {
                 }`}
             >
                 <div className="mx-auto flex max-w-[80rem] items-center justify-between px-6 py-4">
-                    <a href="#top" className="flex items-center gap-2">
+                    <a href="#top" onClick={scrollToSection('top')} className="flex items-center gap-2">
                         <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#1A365D]">
                             <Leaf className="h-5 w-5 text-white" strokeWidth={2} />
                         </span>
@@ -156,14 +182,12 @@ const HomePage = () => {
                         </span>
                     </a>
                     <nav className="hidden items-center gap-8 md:flex">
-                        {NAV.map((n) => (
-                            <a key={n.label} href={n.href} className="text-sm font-500 text-[#1A365D]/70 transition-colors hover:text-[#319795]">
-                                {n.label}
-                            </a>
-                        ))}
-                        <a href="#newsletter" className="rounded-full bg-[#319795] px-5 py-2 text-sm font-600 text-white transition-transform hover:-translate-y-px active:scale-[0.98]">
+                        <a href="#articles" onClick={scrollToSection('articles')} className="text-sm font-500 text-[#1A365D]/70 transition-colors hover:text-[#319795]">Artikel</a>
+                        <a href="#trust" onClick={scrollToSection('trust')} className="text-sm font-500 text-[#1A365D]/70 transition-colors hover:text-[#319795]">Tentang Kami</a>
+                        <a href="#newsletter" onClick={scrollToSection('newsletter')} className="text-sm font-500 text-[#1A365D]/70 transition-colors hover:text-[#319795]">Kontak</a>
+                        <button onClick={scrollToSection('newsletter')} className="rounded-full bg-[#319795] px-5 py-2 text-sm font-600 text-white transition-transform hover:-translate-y-px active:scale-[0.98]">
                             Berlangganan
-                        </a>
+                        </button>
                     </nav>
                     <button className="md:hidden text-[#1A365D]" onClick={() => setOpen(!open)} aria-label="Menu">
                         {open ? <X /> : <Menu />}
@@ -171,14 +195,12 @@ const HomePage = () => {
                 </div>
                 {open && (
                     <div className="border-t border-[#1A365D]/10 bg-white px-6 py-4 md:hidden">
-                        {NAV.map((n) => (
-                            <a key={n.label} href={n.href} onClick={() => setOpen(false)} className="block py-2.5 text-sm font-500 text-[#1A365D]/80">
-                                {n.label}
-                            </a>
-                        ))}
-                        <a href="#newsletter" onClick={() => setOpen(false)} className="mt-2 block rounded-full bg-[#319795] px-5 py-2.5 text-center text-sm font-600 text-white">
+                        <a href="#articles" onClick={scrollToSection('articles')} className="block py-2.5 text-sm font-500 text-[#1A365D]/80">Artikel</a>
+                        <a href="#trust" onClick={scrollToSection('trust')} className="block py-2.5 text-sm font-500 text-[#1A365D]/80">Tentang Kami</a>
+                        <a href="#newsletter" onClick={scrollToSection('newsletter')} className="block py-2.5 text-sm font-500 text-[#1A365D]/80">Kontak</a>
+                        <button onClick={scrollToSection('newsletter')} className="mt-2 block w-full rounded-full bg-[#319795] px-5 py-2.5 text-center text-sm font-600 text-white">
                             Berlangganan
-                        </a>
+                        </button>
                     </div>
                 )}
             </header>
@@ -206,12 +228,12 @@ const HomePage = () => {
                         </Reveal>
                         <Reveal i={3}>
                             <div className="mt-8 flex flex-wrap items-center gap-4">
-                                <a href="#articles" className="inline-flex items-center gap-2 rounded-full bg-[#1A365D] px-6 py-3 text-sm font-600 text-white transition-transform hover:-translate-y-px active:scale-[0.98]">
+                                <button onClick={scrollToSection('articles')} className="inline-flex items-center gap-2 rounded-full bg-[#1A365D] px-6 py-3 text-sm font-600 text-white transition-transform hover:-translate-y-px active:scale-[0.98]">
                                     Baca Artikel Terbaru <ArrowRight className="h-4 w-4" />
-                                </a>
-                                <a href="#trust" className="text-sm font-600 text-[#1A365D]/70 transition-colors hover:text-[#319795]">
+                                </button>
+                                <button onClick={scrollToSection('editorial-team')} className="text-sm font-600 text-[#1A365D]/70 transition-colors hover:text-[#319795]">
                                     Standar Editorial Kami
-                                </a>
+                                </button>
                             </div>
                         </Reveal>
                     </div>
@@ -274,7 +296,6 @@ const HomePage = () => {
                             <p className="leading-relaxed text-[#1A365D]/65">{featured.excerpt}</p>
                             <div className="mt-2 flex items-center gap-4 text-sm text-[#1A365D]/50">
                                 <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {featured.read}</span>
-                                <span>{featured.date}</span>
                             </div>
                             <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-600 text-[#1A365D] transition-colors group-hover:text-[#319795]">
                                 Baca Ulasan Lengkap <ArrowUpRight className="h-4 w-4" />
@@ -319,8 +340,8 @@ const HomePage = () => {
                 </div>
             </section>
 
-{/* Bagian Komitmen Komite Editorial Rapi 2 Nama */}
-            <section className="mx-auto max-w-[80rem] px-6 py-20 md:py-28">
+            {/* Bagian Komitmen Komite Editorial */}
+            <section id="editorial-team" className="mx-auto max-w-[80rem] px-6 py-20 md:py-28">
                 <Reveal>
                     <div className="grid items-center gap-10 rounded-3xl border border-[#1A365D]/10 bg-white p-8 shadow-sm md:p-12">
                         <div>
@@ -332,12 +353,12 @@ const HomePage = () => {
                             {/* Pembagian Tim Reviewer / Editor */}
                             <div className="mt-8 grid gap-6 border-t border-slate-100 pt-6 sm:grid-cols-2">
                                 <div>
-                                    <p className="text-sm font-700 text-[#1A365D]">Muhammad Syuhada Ar'rayyan</p>
+                                    <p className="text-sm font-700 text-[#1A365D]">Muhammad Syuhada Ar\'rayyan</p>
                                     <p className="text-xs text-[#1A365D]/60">Komite Editorial & Reviewer Gizi</p>
                                     <p className="text-xs font-500 text-[#319795]">Universitas Islam Negeri Sumatera Utara</p>
                                 </div>
                                 <div className="border-l-0 pt-4 sm:pt-0 sm:border-l sm:pl-6 border-slate-100">
-                                    <p className="text-sm font-700 text-[#1A365D]">Andina Putri, S.Gz</p>
+                                    <p className="text-sm font-700 text-[#1A365D]">Andina Putri</p>
                                     <p className="text-xs text-[#1A365D]/60">Komite Editorial & Reviewer Gizi</p>
                                     <p className="text-xs font-500 text-[#319795]">Universitas Negeri Medan</p>
                                 </div>
@@ -350,6 +371,7 @@ const HomePage = () => {
                     </div>
                 </Reveal>
             </section>
+
             {/* Form Buletin Berita / Newsletter */}
             <section id="newsletter" className="bg-[#1A365D] py-20 md:py-24">
                 <div className="mx-auto max-w-2xl px-6 text-center">
@@ -370,7 +392,7 @@ const HomePage = () => {
                                     className="w-full rounded-full border border-white/10 bg-white py-3 pl-11 pr-4 text-sm text-[#1A365D] outline-none ring-[#319795]/40 focus:ring-2"
                                 />
                             </div>
-                            <button className="rounded-full bg-[#319795] px-6 py-3 text-sm font-600 text-white transition-transform hover:-translate-y-px active:scale-[0.98]">
+                            <button type="submit" className="rounded-full bg-[#319795] px-6 py-3 text-sm font-600 text-white transition-transform hover:-translate-y-px active:scale-[0.98]">
                                 Berlangganan
                             </button>
                         </form>
@@ -379,7 +401,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* Kaki Halaman / Footer Resmi Perusahaan */}
+            {/* Kaki Halaman / Footer */}
             <footer className="border-t border-[#1A365D]/10 bg-white">
                 <div className="mx-auto max-w-[80rem] px-6 py-14">
                     <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
@@ -397,15 +419,17 @@ const HomePage = () => {
                         <div>
                             <p className="text-xs font-600 uppercase tracking-widest text-[#1A365D]/40">Jelajahi</p>
                             <ul className="mt-4 space-y-2.5 text-sm text-[#1A365D]/65">
-                                {NAV.map((n) => <li key={n.label}><a href={n.href} className="hover:text-[#319795]">{n.label}</a></li>)}
+                                <li><a href="#articles" onClick={scrollToSection('articles')} className="hover:text-[#319795]">Artikel</a></li>
+                                <li><a href="#trust" onClick={scrollToSection('trust')} className="hover:text-[#319795]">Tentang Kami</a></li>
+                                <li><a href="#newsletter" onClick={scrollToSection('newsletter')} className="hover:text-[#319795]">Kontak</a></li>
                             </ul>
                         </div>
                         <div>
                             <p className="text-xs font-600 uppercase tracking-widest text-[#1A365D]/40">Korporasi</p>
                             <ul className="mt-4 space-y-2.5 text-sm text-[#1A365D]/65">
-                                <li><a href="#trust" className="hover:text-[#319795]">Kebijakan Editorial</a></li>
-                                <li><a href="#newsletter" className="hover:text-[#319795]">Hubungan Media</a></li>
-                                <li><a href="#top" className="hover:text-[#319795]">Privasi & Hukum</a></li>
+                                <li><a href="#trust" onClick={scrollToSection('trust')} className="hover:text-[#319795]">Kebijakan Editorial</a></li>
+                                <li><a href="#newsletter" onClick={scrollToSection('newsletter')} className="hover:text-[#319795]">Hubungan Media</a></li>
+                                <li><a href="#top" onClick={scrollToSection('top')} className="hover:text-[#319795]">Privasi & Hukum</a></li>
                             </ul>
                         </div>
                     </div>
@@ -433,9 +457,17 @@ const HomePage = () => {
                             >
                                 &larr; Kembali ke Beranda
                             </button>
-                            <span className="font-display text-sm font-600 tracking-tight text-[#1A365D]">
-                                NutrisiDietMu Reader
-                            </span>
+                            <div className="flex items-center gap-2">
+                                <button 
+                                    onClick={() => handleShare(activeArticle)}
+                                    className="inline-flex items-center gap-1.5 rounded-full bg-[#319795]/10 px-4 py-2 text-sm font-600 text-[#319795] transition-colors hover:bg-[#319795]/20"
+                                >
+                                    <Share2 className="h-4 w-4" /> Bagikan
+                                </button>
+                                <span className="hidden sm:inline font-display text-sm font-600 tracking-tight text-[#1A365D]">
+                                    NutrisiDietMu Reader
+                                </span>
+                            </div>
                         </div>
                     </div>
 
