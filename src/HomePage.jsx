@@ -24,10 +24,10 @@ const NAV = [
 const featured = {
     tag: 'Ulasan Pilihan',
     title: 'Bukti Ilmiah di Balik Omega-3: Apa yang Sebenarnya Diungkap oleh Riset?',
-    excerpt:
-        'Tinjauan kritis terhadap uji klinis acak terkontrol mengenai asam lemak omega-3 kelautan — dampak terukurnya pada kesehatan kardiovaskular dan kognitif, serta area di mana bukti ilmiah masih belum konklusif.',
+    excerpt: 'Tinjauan kritis terhadap uji klinis acak terkontrol mengenai asam lemak omega-3 kelautan — dampak terukurnya pada kesehatan kardiovaskular dan kognitif, serta area di mana bukti ilmiah masih belum konklusif.',
+    content: 'Asam lemak Omega-3, khususnya EPA (eicosapentaenoic acid) dan DHA (docosahexaenoic acid), telah lama dipromosikan sebagai suplemen ajaib untuk kesehatan jantung dan otak. Namun, gambaran ilmiah yang sebenarnya jauh lebih bernuansa daripada sekadar klaim pemasaran.\n\n### 1. Apa yang Ditunjukkan oleh Uji Klinis Acak?\nTinjauan sistematis terhadap puluhan uji klinis acak terkontrol (RCT) menunjukkan bahwa konsumsi suplemen omega-3 dosis standar (sekitar 1 gram per hari) memberikan pengurangan risiko yang relatif kecil namun signifikan terhadap kematian akibat penyakit jantung koroner dan serangan jantung infark miokard. Manfaat ini paling terlihat pada individu yang memang memiliki asupan ikan laut yang sangat rendah dalam diet harian mereka.\n\n### 2. Batasan Bukti Ilmiah\nDi sisi lain, bukti mengenai kemampuan omega-3 untuk mencegah penurunan kognitif atau penyakit Alzheimer pada orang dewasa sehat masih dinilai belum konklusif. Meskipun DHA adalah komponen struktural utama dari korteks serebral otak, studi klinis menunjukkan bahwa pemberian suplemen setelah gejala demensia muncul tidak mengubah jalannya penyakit secara signifikan. Oleh karena itu, intervensi gizi sejak usia dini dan paruh baya jauh lebih direkomendasikan.\n\n### 3. Rekomendasi Asupan\nDaripada bergantung sepenuhnya pada suplemen kapsul minyak ikan, pedoman gizi klinis menyarankan konsumsi 2 porsi ikan berlemak (seperti tuna, makarel, atau salmon lokal) per minggu. Hal ini dikarenakan matriks pangan utuh menyediakan zat gizi mikro pendukung lainnya seperti selenium dan vitamin D yang meningkatkan penyerapan asam lemak esensial tersebut di dalam tubuh manusia.',
+    cat: 'Nutrisi Harian',
     read: '12 menit baca',
-    date: 'Maret 2026',
     img: IMG.salmon,
 };
 
@@ -35,7 +35,7 @@ const articles = [
     {
         title: 'Mitos vs Fakta Diet Rendah Karbohidrat: Tinjauan Gizi Klinis',
         excerpt: 'Mengupas tuntas tren pembatasan karbohidrat ekstrem dari kacamata sains. Kapan diet ini efektif, apa efek sampingnya bagi metabolisme, dan bagaimana penerapannya yang aman tanpa merusak fungsi organ tubuh.',
-        content: 'Diet rendah karbohidrat kini menjadi salah satu tren paling populer di dunia kesehatan. Namun, dari sudut pandang gizi klinis, pembatasan ekstrem sering kali membawa dampak yang tidak terduga pada metabolisme tubuh. Karbohidrat adalah sumber energi utama bagi otak dan otot. Ketika asupannya dipotong secara radikal, tubuh dipaksa masuk ke dalam kondisi ketosis, di mana lemak digunakan sebagai bahan bakar utama.\n\nMeskipun efektif untuk penurunan berat badan jangka pendek, diet rendah karbohidrat yang tidak diawasi dapat memicu kelelahan kronis, kabut otak (brain fog), hingga ketidakseimbangan elektrolit. Penerapan yang aman harus tetap mengutamakan karbohidrat kompleks berserat tinggi (seperti beras merah atau oat) dalam porsi yang disesuaikan, bukan menghilangkannya sama sekali demi menjaga kinerja organ dalam tetap optimal.',
+        content: 'Diet rendah karbohidrat (*low-carb diet*) telah menjadi salah satu strategi paling populer untuk penurunan berat badan cepat. Namun, dalam praktik gizi klinis, pembatasan makronutrien ini sering kali disalahartikan oleh masyarakat awam, sehingga memicu miskonsepsi yang berpotensi mengganggu keseimbangan metabolisme jangka panjang.\n\n### 1. Mekanisme Biokimia dan Metabolisme Tubuh\nKarbohidrat merupakan sumber energi utama yang paling efisien bagi tubuh manusia. Setiap 1 gram karbohidrat yang dikonsumsi menghasilkan energi sebesar 4 kkal. Di dalam tubuh, karbohidrat dipecah menjadi glukosa, yang menjadi bahan bakar mutlak bagi sel-sel otak dan sistem saraf pusat.\n\nKetika asupan karbohidrat dipotong secara drastis hingga di bawah 50 gram per hari, tubuh akan kehabisan simpanan glikogen di hati dan otot. Kondisi ini memaksa tubuh memasuki fase alternatif yang disebut **Ketosis**. Dalam fase ini, hati akan memecah lemak menjadi komponen yang disebut *ketone bodies* (benda keton) untuk digunakan sebagai energi pengganti glukosa. Meskipun mekanisme ini sangat efektif untuk memangkas massa lemak jaringan adiposa dalam jangka pendek, ketosis yang tidak terkontrol dapat memicu *ketoacidosis* ringan, kelelahan kronis (*keto flu*), serta penurunan performa kognitif akibat kurangnya suplai glukosa optimal ke otak.\n\n### 2. Simulasi Perhitungan Gizi Klinis\nUntuk memahami mengapa pembatasan ekstrem bisa berbahaya, mari kita simulasikan perhitungan kebutuhan gizi makro pada seorang individu. Berdasarkan standar gizi medis, proporsi ideal distribusi energi harian adalah:\n* Karbohidrat: 45% - 65% dari total energi\n* Protein: 10% - 20% dari total energi\n* Lemak: 20% - 25% dari total energi\n\nJika seorang individu memiliki **Total Energy Expenditure (TEE)** atau kebutuhan energi total sebesar **2000 kkal per hari**, maka perhitungan kebutuhan karbohidrat normalnya adalah:\n\n* Batas Minimal (45%): (45% x 2000 kkal) / 4 kkal/gram = **225 gram karbohidrat/hari**\n* Batas Maksimal (65%): (65% x 2000 kkal) / 4 kkal/gram = **325 gram karbohidrat/hari**\n\nPada tren *extreme low-carb diet*, asupan ini sering kali dipangkas hingga hanya tersisa 20–50 gram per hari. Pemotongan ekstrem sebesar >80% dari kebutuhan fisiologis ini jika dilakukan dalam jangka panjang tanpa supervisi ahli gizi terdaftar dapat memicu katabolisme protein otot (tubuh memecah otot sendiri untuk dijadikan energi) dan membebani kerja ginjal.\n\n### 3. Tabel Kandungan Zat Gizi Sumber Karbohidrat Pilihan\nSebagai klinisi dan edukator, kita harus mengarahkan masyarakat bukan untuk menjauhi karbohidrat, melainkan memilih jenis karbohidrat kompleks berkualitas (tinggi serat dan memiliki indeks glikemik rendah). Berikut adalah tabel perbandingan zat gizi per 100 gram bahan makanan sumber karbohidrat:\n\n* **Beras Merah (Dimasak):** Energi: 110 kkal | Karbohidrat: 23 g | Serat: 1.8 g | Protein: 2.6 g\n* **Oatmeal (Dimasak):** Energi: 68 kkal | Karbohidrat: 12 g | Serat: 1.7 g | Protein: 2.4 g\n* **Ubi Jalar Rebus:** Energi: 86 kkal | Karbohidrat: 20 g | Serat: 3.0 g | Protein: 1.6 g\n* **Beras Putih Konvensional (Dimasak):** Energi: 130 kkal | Karbohidrat: 28 g | Serat: 0.4 g | Protein: 2.7 g\n\nDari data di atas, terlihat jelas bahwa ubi jalar dan beras merah menawarkan kepadatan serat yang jauh lebih tinggi dan kalori yang lebih rendah dibandingkan beras putih konvensional. Serat ini berfungsi memperlambat penyerapan glukosa di usus halus, sehingga mencegah lonjakan insulin yang drastis.\n\n### 4. Kesimpulan dan Rekomendasi Medis\nDiet rendah karbohidrat tidak sepenuhnya salah; metode ini memiliki efektivitas klinis yang baik untuk pasien dengan kondisi medis tertentu seperti obesitas morbid, diabetes melitus tipe 2, atau resistensi insulin berat. Namun, bagi populasi sehat, pendekatan yang jauh lebih bijak dan berkelanjutan (*sustainable*) adalah melakukan **Carbohydrate Quality Modification**—yaitu mengurangi konsumsi gula sederhana (seperti sirup dan makanan manis) dan menggantinya dengan karbohidrat kompleks yang kaya akan mikronutrien dan serat pangan, bukan menghilangkannya sama sekali.',
         cat: 'Diet & Metabolisme',
         read: '8 menit baca',
         img: IMG.grains,
@@ -63,6 +63,38 @@ const articles = [
         cat: 'Kesehatan Pencernaan',
         read: '9 menit baca',
         img: IMG.berries,
+    },
+    {
+        title: 'Efektivitas Intermittent Fasting Terhadap Sensitivitas Insulin',
+        excerpt: 'Tinjauan klinis mengenai mekanisme pembatasan waktu makan terhadap regulasi gula darah. Apakah metode ini aman untuk penderita pradiabetes dan bagaimana protokol gizi yang disarankan.',
+        content: 'Intermittent Fasting (IF) atau puasa intermiten bukan sekadar tren penurunan berat badan, melainkan metode yang memengaruhi regulasi hormon tubuh, terutama insulin. Secara klinis, saat tubuh berada dalam fase puasa yang terkontrol (misalnya protokol 16:8), kadar glukosa darah akan memnunur secara signifikan, memaksa pankreas untuk mengurangi produksi insulin.\n\nPenurunan reguler ini melatih sel-sel tubuh untuk kembali sensitif terhadap insulin, menjadikannya strategi yang potensial bagi penderita pradiabetes atau resistensi insulin berat. Namun, efektivitas IF sangat bergantung pada apa yang dikonsumsi saat jendela makan terbuka. Jika jendela makan diisi dengan makanan tinggi gula sederhana, manfaat perbaikan sensitivitas insulin ini akan hilang. Konsultasi dengan ahli gizi tetap diwajibkan untuk menentukan kecukupan kalori harian.',
+        cat: 'Diet & Metabolisme',
+        read: '8 menit baca',
+        img: IMG.hero,
+    },
+    {
+        title: 'Analisis Zat Gizi Mikro pada Remaja Putri: Pencegahan Anemia Sejak Dini',
+        excerpt: 'Mengapa pemenuhan zat besi dan vitamin C esensial bagi remaja. Dampak anemia jangka panjang terhadap produktivitas dan persiapan kesehatan reproduksi di masa depan.',
+        content: 'Anemia defisiensi besi pada remaja putri masih menjadi tantangan gizi makro yang serius di Indonesia. Remaja putri memiliki risiko tinggi karena siklus menstruasi bulanan serta fase pertumbuhan yang pesat. Kekurangan zat besi tidak hanya menurunkan konsentrasi belajar dan imunitas, tetapi juga menjadi prediktor kesehatan buruk di masa depan saat mereka memasuki usia reproduksi.\n\nSecara ilmiah, penyerapan zat besi hewani (zat besi heme) dari daging atau ikan jauh lebih tinggi dibanding zat besi nabati (non-heme). Untuk mengoptimalkan penyerapan zat besi non-heme dari sayuran seperti bayam, sangat disarankan mengonsumsinya bersamaan dengan sumber Vitamin C (seperti jeruk atau jambu biji), serta menghindari konsumsi teh atau kopi berdekatan dengan jam makan karena kandungan taninnya dapat menghambat penyerapan zat besi.',
+        cat: 'Gizi Masyarakat',
+        read: '7 menit baca',
+        img: IMG.author,
+    },
+    {
+        title: 'Peran Antioksidan Eksogen dalam Menangkal Stres Oksidatif',
+        excerpt: 'Bagaimana radikal bebas merusak sel tubuh dan cara optimal mengonsumsi makanan kaya vitamin A, C, dan E untuk mendukung sistem pertahanan internal tubuh.',
+        content: 'Stres oksidatif terjadi ketika jumlah radikal bebas di dalam tubuh melebihi kapasitas antioksidan endogen yang diproduksi secara alami oleh tubuh kita. Kondisi ini memicu kerusakan seluler kronis yang menjadi akar dari berbagai penyakit degeneratif seperti kanker dan penyakit jantung.\n\nUntuk memperkuat pertahanan tubuh, diperlukan asupan antioksidan eksogen dari makanan. Vitamin A (dari wortel dan hati), Vitamin C (dari buah-buahan sitrus), dan Vitamin E (dari kacang-kacangan dan biji-bijian) bekerja sinergis menetralisir radikal bebas. Kunci utamanya adalah variasi warna makanan; semakin beragam warna sayur dan buah yang Anda konsumsi setiap hari, semakin kaya pula jenis jaringan antioksidan yang melindungi sel tubuh Anda.',
+        cat: 'Micronutrients',
+        read: '9 menit baca',
+        img: IMG.berries,
+    },
+    {
+        title: 'Bebas Gluten (Gluten-Free): Kebutuhan Medis atau Sekadar Tren Gaya Hidup?',
+        excerpt: 'Membedakan penyakit Celiac, intoleransi gluten, dan miskonsepsi publik yang menganggap produk bebas gluten selalu lebih sehat untuk menurunkan berat badan.',
+        content: 'Label "Gluten-Free" kini marak ditemukan di berbagai produk pangan kemasan. Namun, secara sains gizi, siapakah yang benar-benar membutuhkan makanan bebas gluten? Secara medis, diet ini wajib diterapkan 100% oleh penderita Penyakit Celiac (Celiac Disease) dan orang dengan kondisi *Non-Celiac Gluten Sensitivity* (NCGS) karena protein gluten dapat merusak lapisan usus halus mereka.\n\nBagi populasi umum yang tidak memiliki sensitivitas medis terhadap gluten, mengonsumsi produk komersial berlabel bebas gluten dengan harapan menurunkan berat badan adalah sebuah miskonsepsi. Banyak produk gluten-free kemasan yang justru ditambahkan gula dan lemak ekstra agar teksturnya menyerupai produk gandum asli. Memahami kebutuhan tubuh secara klinis jauh lebih penting daripada sekadar mengikuti tren pemasaran.',
+        cat: 'Nutrisi Harian',
+        read: '8 menit baca',
+        img: IMG.grains,
     },
 ];
 
@@ -93,7 +125,7 @@ const Reveal = ({ children, i = 0, className = '' }) => (
 const HomePage = () => {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [activeArticle, setActiveArticle] = useState(null); // State untuk artikel aktif
+    const [activeArticle, setActiveArticle] = useState(null);
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20);
@@ -390,7 +422,7 @@ const HomePage = () => {
                     {/* Area Konten Utama Artikel */}
                     <article className="mx-auto max-w-3xl px-6 py-10 md:py-16">
                         {/* Kategori & Waktu Baca */}
-                        <div className="flex items-center gap-3 text-xs font-650 uppercase tracking-widest text-[#319795]">
+                        <div className="flex items-center gap-3 text-xs font-600 uppercase tracking-widest text-[#319795]">
                             <span>{activeArticle.cat}</span>
                             <span className="text-slate-300">&bull;</span>
                             <span className="flex items-center gap-1 text-slate-400">
@@ -414,7 +446,6 @@ const HomePage = () => {
 
                         {/* Isi Teks Artikel Lengkap (Gaya Jurnal Ilmiah) */}
                         <div className="mt-10 text-base md:text-lg leading-relaxed text-slate-700 whitespace-pre-line font-serif">
-                            {/* Trik CSS Render Markdown Sederhana */}
                             {activeArticle.content ? (
                                 activeArticle.content.split('\n\n').map((paragraph, index) => {
                                     if (paragraph.startsWith('###')) {
@@ -446,4 +477,8 @@ const HomePage = () => {
                     </article>
                 </div>
             )}
+        </div>
+    );
+};
+
 export default HomePage;
