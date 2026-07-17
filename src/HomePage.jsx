@@ -243,7 +243,13 @@ const HomePage = () => {
                 </div>
             </section>
             
-            {/* Sisa footer dan lainnya sama */}
+                        <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-slate-400">
+                            <p>Ditinjau secara klinis oleh: <strong>Komite Editorial Nutrisi & Gizi PT Rayliziie Media Digital</strong></p>
+                            <p className="mt-1">Dipublikasikan pada kategori {activeArticle.cat} &bull; Berbasis Bukti Ilmiah</p>
+                        </div>
+                    </article>
+                </div>
+            )}
         </div>
     );
 };
