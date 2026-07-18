@@ -134,8 +134,8 @@ const HomePage = () => {
                 // Mengambil data dengan filter status 'approved'
                 const response = await fetch(`${SUPABASE_URL}/rest/v1/rayliziie_articles?status=eq.approved`, {
                     headers: {
-                        'apikey': SUPABASE_ANON_KEY,
-                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                        'apikey': sb_publishable_ppzSXi7DuN7v0racT9l98A_JxK5-MGG,
+                        'Authorization': `Bearer ${sb_publishable_ppzSXi7DuN7v0racT9l98A_JxK5-MGG}`
                     }
                 });
                 
