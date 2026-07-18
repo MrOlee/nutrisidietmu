@@ -25,7 +25,7 @@ const featured = {
     img: IMG.salmon,
 };
 
-const initialArticles = [
+const STATIC_ARTICLES = [
     {
         title: 'Mitos vs Fakta Diet Rendah Karbohidrat: Tinjauan Gizi Klinis',
         excerpt: 'Mengupas tuntas tren pembatasan karbohidrat ekstrem dari kacamata sains. Kapan diet ini efektif, apa efek sampingnya bagi metabolisme, dan bagaimana penerapannya yang aman tanpa merusak fungsi organ tubuh.',
@@ -93,7 +93,7 @@ const initialArticles = [
 ];
 
 const pillars = [
-    { icon: FlaskConical, title: 'Sumber Telaah Sejawat (Peer-Reviewed)', desc: 'Setiap klaim yang kami tulis wajib merujuk langsung pada literatur primer dan pedoman klinis resmi — tanpa opini tanpa dasar.' },
+    { icon: FlaskConical, title: 'Sumber Telah Sejawat (Peer-Reviewed)', desc: 'Setiap klaim yang kami tulis wajib merujuk langsung pada literatur primer dan pedoman klinis resmi — tanpa opini tanpa dasar.' },
     { icon: ShieldCheck, title: 'Ditinjau oleh Ahli Gizi', desc: 'Setiap artikel diperiksa secara ketat oleh Ahli Gizi (Dietitian) terdaftar sebelum diterbitkan demi menjaga akurasi standar medis.' },
     { icon: BookOpenCheck, title: 'Ditulis untuk Kejelasan', desc: 'Sains yang rumit dan membingungkan kami terjemahkan menjadi panduan praktis yang jujur dan mudah dipahami oleh masyarakat awam.' },
 ];
@@ -129,35 +129,26 @@ const HomePage = () => {
         const onScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener('scroll', onScroll);
 
-        const fetchSupabaseArticles = async () => {
+        const fetchFromSupabase = async () => {
             try {
-                // Mengambil data dengan filter status 'approved'
-                const response = await fetch(`${SUPABASE_URL}/rest/v1/rayliziie_articles?status=eq.approved`, {
-                    headers: {
-                        'apikey': sb_publishable_ppzSXi7DuN7v0racT9l98A_JxK5-MGG,
-                        'Authorization': `Bearer ${sb_publishable_ppzSXi7DuN7v0racT9l98A_JxK5-MGG}`
-                    }
+                const res = await fetch("https://harpdcqmrqdgckcuhxfr.supabase.co/rest/v1/rayliziie_articles?status=eq.Published&category=eq.gizi&select=*&order=created_at.desc", {
+                    headers: { 'apikey': "sb_publishable_ppzSXi7DuN7v0racT9l98A_JxK5-MGG", 'Authorization': "Bearer sb_publishable_ppzSXi7DuN7v0racT9l98A_JxK5-MGG" }
                 });
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    const newArticles = data.map(item => ({
+                const data = await res.json();
+                if (Array.isArray(data) && data.length > 0) {
+                    const formatted = data.map(item => ({
                         title: item.title,
-                        excerpt: item.content.substring(0, 100) + '...',
+                        excerpt: item.content?.substring(0, 100) + '...',
                         content: item.content,
-                        cat: item.category || 'Berita Gizi',
+                        cat: item.category || 'Info Gizi',
                         read: '5 menit baca',
                         img: item.image_url || IMG.hero
                     }));
-                    setArticles([...initialArticles, ...newArticles]);
+                    setArticles([...STATIC_ARTICLES, ...formatted]);
                 }
-            } catch (err) {
-                console.error("Gagal menarik data dari server:", err);
-            }
+            } catch (err) { console.error("Sync error:", err); }
         };
-
-        fetchSupabaseArticles();
-
+        fetchFromSupabase();
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
